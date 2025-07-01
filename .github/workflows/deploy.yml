@@ -23,9 +23,9 @@ jobs:
       - name: Deploy to VPS
         run: |
           ssh -i ~/.ssh/id_ed25519 dln@84.21.172.23 << 'EOF'
-            cd /home/youruser/myproject
+            cd /home/dln/dev/python_full_test
             git pull
-            source venv/bin/activate
+            source .venv/bin/activate
             pip install -r requirements.txt
             python manage.py migrate
             python manage.py collectstatic --noinput
