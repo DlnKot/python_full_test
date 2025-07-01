@@ -1,1 +1,0 @@
-web: gunicorn python_full_test.wsgi --log-file -
